@@ -410,8 +410,6 @@ class Invoice extends FastbillAPI {
 
             typeOf(id).mustBe('number');
 
-            paidDate = paidDate || null;
-
             this.$request({
                 service: this.$scope + 'setpaid',
                 data: {
