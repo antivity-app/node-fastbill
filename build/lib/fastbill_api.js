@@ -28,10 +28,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class FastbillAPI {
     constructor(credentials) {
-        let auth = new Buffer(`${ credentials.email }:${ credentials.apikey }`).toString('base64');
+        let auth = new Buffer(`${credentials.email}:${credentials.apikey}`).toString('base64');
         this.$uri = 'https://my.fastbill.com/api/1.0/api.php';
         this.$headers = {
-            Authorization: `Basic ${ auth }`,
+            Authorization: `Basic ${auth}`,
             'Content-Type': 'application/json'
         };
     }

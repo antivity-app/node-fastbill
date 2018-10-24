@@ -133,7 +133,10 @@ class Invoice extends _fastbill_api.FastbillAPI {
                     }));
                 }
 
-                resolve(resultset.INVOICE_ID);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             invoice = invoice || {};
@@ -259,7 +262,10 @@ class Invoice extends _fastbill_api.FastbillAPI {
                         detail: err
                     }));
                 }
-                resolve(resultset.INVOICE_NUMBER);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             this.$request({
@@ -294,7 +300,10 @@ class Invoice extends _fastbill_api.FastbillAPI {
                         detail: err
                     }));
                 }
-                resolve(resultset.INVOICE_NUMBER);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             (0, _type_handler.typeOf)(id).mustBe('number');
@@ -373,7 +382,10 @@ class Invoice extends _fastbill_api.FastbillAPI {
                         detail: err
                     }));
                 }
-                resolve(resultset.INVOICE_NUMBER);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             (0, _type_handler.typeOf)(id).mustBe('number');
@@ -422,7 +434,10 @@ class Invoice extends _fastbill_api.FastbillAPI {
                         detail: err
                     }));
                 }
-                resolve(resultset.INVOICE_NUMBER);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             (0, _type_handler.typeOf)(id).mustBe('number');

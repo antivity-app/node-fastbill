@@ -137,7 +137,10 @@ class Invoice extends FastbillAPI {
                     );
                 }
 
-                resolve(resultset.INVOICE_ID);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             invoice = invoice || {};
@@ -270,7 +273,10 @@ class Invoice extends FastbillAPI {
                         })
                     );
                 }
-                resolve(resultset.INVOICE_NUMBER);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             this.$request({
@@ -308,7 +314,10 @@ class Invoice extends FastbillAPI {
                         })
                     );
                 }
-                resolve(resultset.INVOICE_NUMBER);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
 
             }
 
@@ -393,7 +402,10 @@ class Invoice extends FastbillAPI {
                         })
                     );
                 }
-                resolve(resultset.INVOICE_NUMBER);
+                resolve({
+                    invoiceId: resultset.INVOICE_ID,
+                    invoiceNumber: resultset.INVOICE_NUMBER
+                });
             }
 
             typeOf(id).mustBe('number');
@@ -445,7 +457,10 @@ class Invoice extends FastbillAPI {
                   })
                 );
             }
-            resolve(resultset.INVOICE_NUMBER);
+            resolve({
+                invoiceId: resultset.INVOICE_ID,
+                invoiceNumber: resultset.INVOICE_NUMBER
+            });
         }
 
         typeOf(id).mustBe('number');
